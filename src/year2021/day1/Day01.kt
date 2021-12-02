@@ -27,8 +27,8 @@ fun main() {
         return count
     }
 
-    val testInput = readInput("Day01_test")
-    val input = readInput("Day01")
+    val testInput = readInput("/year2021/day1/Day01_test")
+    val input = readInput("/year2021/day1/Day01")
     check(part1(testInput) == 7)
     println(part1(input))
     check(part2(testInput) == 5)
