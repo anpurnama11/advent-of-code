@@ -6,6 +6,10 @@ fun peopleInTheBus(busStops: Array<Pair<Int, Int>>): Int {
     return sumOfCome - sumOfLeft
 }
 
+fun peopleInTheBusDeclarative(busStops: Array<Pair<Int, Int>>) = busStops.fold(0) { res, (come, left) ->
+    res + come - left
+}
+
 fun main() {
-    println(peopleInTheBus(arrayOf(3 to 0,9 to 1,4 to 8,12 to 2,6 to 1,7 to 8)))
+    println(peopleInTheBusDeclarative(arrayOf(3 to 0,9 to 1,4 to 8,12 to 2,6 to 1,7 to 8)))
 }

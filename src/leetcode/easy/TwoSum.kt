@@ -13,6 +13,12 @@ fun twoSumBruteForce(nums: IntArray, target: Int): IntArray {
     return indexes
 }
 
+fun twoSumFunctional(nums: IntArray, target: Int) = nums.indices.flatMap { i ->
+    (i + 1 until nums.size).mapNotNull { j ->
+        if (nums[i] + nums[j] == target) intArrayOf(i,j) else null
+    }
+}.firstOrNull() ?: intArrayOf()
+
 fun twoSumHashTable(nums: IntArray, target: Int): IntArray {
     val indexes = IntArray(2)
     val hashTable = hashMapOf<Int,Int>()
@@ -25,6 +31,8 @@ fun twoSumHashTable(nums: IntArray, target: Int): IntArray {
     return indexes
 }
 
+fun twoSumHashTableFunctional(nums: IntArray, target: Int) = nums.indices.map {  }
+
 fun main() {
-    println(twoSumHashTable(intArrayOf(3,2,4),6).contentToString())
+    println(twoSumFunctional(intArrayOf(3,2,4),6).contentToString())
 }

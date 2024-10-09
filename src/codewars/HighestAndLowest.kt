@@ -1,11 +1,9 @@
 package codewars
 
 fun highestAndLowest(input: String): String {
-    val charArr = input.split(" ")
-    val nums = charArr.map { it.toInt() }.toSortedSet()
+    val nums = input.split(" ").map { it.toInt() }.toSortedSet()
     return "${nums.lastOrNull()} ${nums.firstOrNull()}"
 }
-
 
 fun main() {
     println(highestAndLowest("8 3 -5 42 -1 0 0 -9 4 7 4 -4"))
